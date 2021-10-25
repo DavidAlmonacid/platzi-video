@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #2f4f4f;
+  color: #fff;
+  font-family: 'Mulish', sans-serif;
+}
+
+.pageWrapper {
+  padding: 30px 0;
+}
+
+.pageWrapper > * {
+  min-width: 320px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 17.5px;
+}
+
+.header__logoContainer {
+  display: inline-flex;
+}
+
+.header__logo {
+  height: 40px;
+}
+
+.header__profile {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.header__profileImage {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.header__toggleMenu {
+  display: none;
+  width: 90.38px;
+  text-align: right;
+  position: fixed;
+  right: 17.5px;
+}
+
+.header__link {
+  display: block;
+  padding: 5px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__profile:hover + .header__toggleMenu, .header__toggleMenu:hover {
+  display: block;
+}
+
+.search {
+  display: grid;
+  grid-template: 125px auto / 1fr;
+  place-items: end center;
+}
+
+.search__input {
+  width: 80%;
+  max-width: 350px;
+  padding: 5px 20px;
+  border: 2px solid #fff;
+  border-radius: 9em;
+  outline: 0;
+  margin-top: 12.5px;
+  font-family: inherit;
+  font-size: 14.5px;
+  background-color: rgba(80, 48, 80, 0.8);
+  color: inherit;
+}
+
+.search__input::placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.carousel__title {
+  padding: 0 17.5px;
+  margin-top: 30px;
+}
+
+.carousel__cards {
+  display: flex;
+  gap: 12.5px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.card {
+  min-width: 175px;
+  height: 225px;
+  border-radius: 20px;
+  margin: 12px 0;
+  transform-origin: left;
+  transition: 0.3s all;
+}
+
+.card__content {
+  /* agregar text shadow */
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+  height: 60%;
+  padding: 12px;
+  position: relative;
+  top: 40%;
+}
+
+.card:first-child {
+  margin-left: 17.5px;
+}
+
+.card:last-child {
+  margin-right: 17.5px;
+}
+
+.carousel__cards:hover .card {
+  opacity: 0.7;
+}
+
+.carousel__cards:hover .card:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.card:hover ~ .card {
+  transform: translateX(17.5px);
+}

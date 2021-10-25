@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PlatziVideo | Sign Up">
+  <title>PlatziVideo | Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+  <div class="pageWrapper">
+    <header class="header">
+      <picture class="header__logoContainer">
+        <img class="header__logo" src="./images/logo-platziVideo.png"
+          alt="Logo Platzi Video" />
+      </picture>
+    </header>
+
+    <main class="mainContent">
+      <section class="login">
+        <h3 class="login__header">Inicia sesión</h3>
+
+        <div class="login__thirdParty thirdParty">
+          <button class="thirdParty__btn">
+            <svg class="thirdParty__btnIcon" width="20" height="20" viewBox="0 0 20 20"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.7948 8.18087H10.1947V12.0454H15.6789C15.4425 13.2946 14.7251 14.3511 13.6436 15.059C12.7296 15.6575 11.5631 16.0115 10.1921 16.0115C7.53762 16.0115 5.29238 14.2549 4.48993 11.8945C4.28799 11.2959 4.17108 10.6558 4.17108 9.99735C4.17108 9.33894 4.28799 8.69875 4.48993 8.1002C5.29503 5.74243 7.54028 3.98582 10.1947 3.98582C11.6907 3.98582 13.0325 4.49068 14.09 5.47959L17.0128 2.61436C15.2458 1.00087 12.9421 0.0119629 10.1947 0.0119629C6.21173 0.0119629 2.76548 2.25002 1.08885 5.51342C0.398011 6.86146 0.00476074 8.38646 0.00476074 9.99995C0.00476074 11.6134 0.398011 13.1358 1.08885 14.4839C2.76548 17.7473 6.21173 19.9853 10.1947 19.9853C12.9475 19.9853 15.2538 19.0901 16.9384 17.5651C18.8648 15.8267 19.9781 13.266 19.9781 10.2238C19.9781 9.5159 19.9144 8.83668 19.7948 8.18087Z"
+                fill="white" />
+            </svg>
+
+            <span class="thirdParty__btnText">Inicia sesión con Google</span>
+          </button>
+
+          <button class="thirdParty__btn">
+            <svg class="thirdParty__btnIcon" width="25" height="20" viewBox="0 0 25 20"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.7319 20C17.0206 20 22.1019 12.3035 22.1019 5.64077C22.1019 5.42539 22.1019 5.20694 22.0927 4.99157C23.0819 4.27543 23.9357 3.38881 24.6141 2.37325C23.69 2.78069 22.7107 3.04922 21.7081 3.17013C22.7642 2.53884 23.5552 1.54555 23.9341 0.374893C22.9418 0.962744 21.8558 1.37541 20.7235 1.59483C19.9623 0.784138 18.955 0.24708 17.8576 0.0668435C16.7603 -0.113393 15.6341 0.0732493 14.6536 0.597861C13.673 1.12247 12.8929 1.95578 12.4339 2.96869C11.9749 3.98161 11.8627 5.11761 12.1147 6.20074C10.1068 6.10005 8.14236 5.57841 6.34896 4.66965C4.55556 3.76089 2.9732 2.48531 1.70452 0.925632C1.06047 2.03801 0.863914 3.35381 1.15478 4.60585C1.44564 5.85788 2.20212 6.95228 3.2706 7.66681C2.46993 7.63961 1.68687 7.42461 0.984563 7.03915V7.10838C0.985944 8.27367 1.38963 9.40275 2.12738 10.3048C2.86514 11.2068 3.89171 11.8264 5.03358 12.0589C4.60016 12.1783 4.15244 12.2378 3.70288 12.2358C3.38595 12.2368 3.06965 12.2074 2.75831 12.1481C3.08105 13.1512 3.70945 14.0283 4.55552 14.6564C5.40159 15.2845 6.42294 15.6323 7.47653 15.651C5.68671 17.0568 3.47582 17.8192 1.19994 17.8155C0.798912 17.8172 0.398168 17.7941 0 17.7463C2.3099 19.2189 4.9925 20.0008 7.7319 20V20Z"
+                fill="white" />
+            </svg>
+
+            <span class="thirdParty__btnText">Inicia sesión con Twitter</span>
+          </button>
+        </div>
+
+        <form class="login__form">
+          <input type="email" class="login__email" placeholder="Correo"
+            autocomplete="email" />
+          <input type="password" class="login__password" placeholder="Contraseña" />
+          <button class="login__btn">Iniciar sesión</button>
+
+          <div class="login__recall">
+            <label for="remember">
+              <input type="checkbox" class="login__remember" id="remember" checked />
+              <span>Recuérdame</span>
+            </label>
+
+            <a href="#" class="login__forgot">Olvidé mi contraseña</a>
+          </div>
+        </form>
+
+        <p class="login__footer">
+          <small>¿No tienes cuenta?</small>
+          <a href="#">Regístrate</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#" class="footer__link">Contáctanos</a>
+      <a href="#" class="footer__link">Política de privacidad</a>
+      <a href="#" class="footer__link">Términos y condiciones</a>
+    </footer>
+  </div>
+</body>
+
+</html>

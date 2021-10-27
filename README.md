@@ -1,4 +1,4 @@
-# Batatabit
+# PlatziVideo
 
 Project from Platzi's [Frontend Developer 2019](https://platzi.com/clases/frontend-developer-2019/) course. Images from [Lorem Picsum](https://picsum.photos/).
 

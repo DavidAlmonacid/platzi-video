@@ -12,7 +12,7 @@
 
 .header__toggleMenu {
   display: none;
-  width: 90.38px;
+  width: 100px;
   text-align: right;
   position: fixed;
   right: 17.5px;
@@ -56,24 +56,13 @@
 }
 
 .card {
-  min-width: 175px;
-  height: 225px;
-  border-radius: 20px;
   margin: 12px 0;
+  border-radius: 20px;
+  height: 225px;
+  min-width: 175px;
   transform-origin: left;
-  transition: 0.3s all;
-}
-
-.card__content {
-  /* agregar text shadow */
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  gap: 6px;
-  height: 60%;
-  padding: 12px;
-  position: relative;
-  top: 40%;
+  transition: 0.5s all;
+  overflow: hidden;
 }
 
 .card:first-child {
@@ -95,4 +84,34 @@
 
 .card:hover ~ .card {
   transform: translateX(17.5px);
+}
+
+.card__content {
+  display: none;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: relative;
+  top: 40%;
+  padding: 12px;
+  height: 60%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  text-shadow: 0 0 5px #000;
+}
+
+.card:hover .card__content {
+  display: flex;
+}
+
+.card__title {
+  width: 100%;
+  align-self: stretch;
+}
+
+.card__data {
+  display: flex;
+  justify-content: space-between;
+  align-self: end;
+  width: 100%;
+  font-size: 12px;
 }

@@ -52,7 +52,11 @@
   display: flex;
   gap: 12.5px;
   overflow-x: auto;
-  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+}
+
+.carousel__cards::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -63,6 +67,8 @@
   transform-origin: left;
   transition: 0.5s all;
   overflow: hidden;
+  user-select: none;
+  scroll-snap-align: center;
 }
 
 .card:first-child {

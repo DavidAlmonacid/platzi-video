@@ -2,7 +2,7 @@
 
 Project from Platzi's [Frontend Developer 2019](https://platzi.com/clases/frontend-developer-2019/) course. Images from [Lorem Picsum](https://picsum.photos/).
 
-[![Frame-3.png](https://i.postimg.cc/TYWcMP0x/Frame-3.png)](https://postimg.cc/jLtfytB3)
+[Frame-3.png](https://i.postimg.cc/TYWcMP0x/Frame-3.png)
 
 ## Built with
 

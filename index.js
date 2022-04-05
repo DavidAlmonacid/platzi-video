@@ -6,12 +6,12 @@ cards.forEach((card, index) => {
 const cardsContent = document.querySelectorAll('.card__content')
 cardsContent.forEach((cardContent) => {
   const playIcon = cardContent.appendChild(new Image())
-  playIcon.src = 'https://i.postimg.cc/C5FdFsmV/play.png'
+  playIcon.src = 'https://i.imgur.com/SgB9Yu8.png'
   playIcon.alt = 'Play icon'
 
   if (!cardContent.parentElement.className.includes('myListCard')) {
     const plusIcon = cardContent.appendChild(new Image())
-    plusIcon.src = 'https://i.postimg.cc/D0B0m4M4/plus.png'
+    plusIcon.src = 'https://i.imgur.com/YytNeGR.png'
     plusIcon.alt = 'Plus icon'
   }
 

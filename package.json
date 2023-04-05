@@ -1,0 +1,27 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "semistandard",
+    "lint:fix": "semistandard --fix"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "semistandard": "^16.0.1",
+    "vite": "^4.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/semistandard/eslintrc.json"
+  }
+}

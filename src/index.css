@@ -1,0 +1,70 @@
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --charcoal: #264653;
+  --charcoal-darker: #213d48;
+  --violet: #672f57;
+  --saffron: #e9c46a;
+  --sandy-brown: #f4a261;
+  --burnt-sienna: #e76f51;
+  --black: #000;
+  --white: #fff;
+
+  --title-gradient: linear-gradient(
+    135deg,
+    var(--saffron) -16%,
+    var(--sandy-brown),
+    var(--burnt-sienna)
+  );
+}
+
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  background-color: var(--charcoal);
+  color: var(--white);
+  font-family: 'Mulish', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+picture {
+  display: flex;
+}
+
+a,
+[role='button']:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
+
+button,
+[role='button'] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 9em;
+  width: fit-content;
+  font-weight: 700;
+}
+
+button:active,
+[role='button']:active {
+  opacity: 0.8;
+}
+
+input,
+button,
+[role='button'] {
+  font: 15px 'Mulish', sans-serif;
+}

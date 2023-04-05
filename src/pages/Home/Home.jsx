@@ -1,34 +1,32 @@
 import { useEffect, useState } from 'react';
+import { BASE_URL, API_KEY } from '@/config';
+import { Trending } from '@components';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-  const baseImageURL = 'https://www.themoviedb.org/t/p/w220_and_h330_face';
-  const baseURL = 'https://api.themoviedb.org/3';
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  const API = `${baseURL}/trending/all/day?api_key=${API_KEY}`;
+  const [series, setSeries] = useState([]);
+
+  const API_MOVIES = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}`;
+  const API_SERIES = `${BASE_URL}/trending/tv/day?api_key=${API_KEY}`;
+
+  const getData = async (API, setState) => {
+    const response = await fetch(API);
+    const data = await response.json();
+
+    console.log(data.results);
+    setState(data.results);
+  };
 
   useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(API);
-      const data = await response.json();
-
-      console.log(data);
-
-      setMovies(data.results);
-    };
-
-    getData();
+    getData(API_MOVIES, setMovies);
+    getData(API_SERIES, setSeries);
   }, []);
 
   return (
-    <div>
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <h1>{movie.title || movie.name}</h1>
-          <img src={baseImageURL + movie.poster_path} alt={movie.name} />
-        </div>
-      ))}
-    </div>
+    <>
+      <Trending media={movies} />
+      <Trending media={series} />
+    </>
   );
 };
 

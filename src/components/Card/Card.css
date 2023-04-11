@@ -1,0 +1,27 @@
+.card {
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:first-child:hover {
+  margin-left: 4px;
+}
+
+.card__image {
+  border-radius: 4px;
+}
+
+.card__info {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.card:hover .card__info {
+  display: block;
+}

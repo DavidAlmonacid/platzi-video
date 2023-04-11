@@ -17,22 +17,18 @@
 .media-list__collection {
   display: flex;
   gap: 24px;
-  padding-bottom: 12px;
+  padding: 12px 0;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
 
 .media-list__collection::-webkit-scrollbar {
   border-radius: 9em;
-  height: 4px;
+  height: 6px;
   background-color: var(--grey-80);
 }
 
 .media-list__collection::-webkit-scrollbar-thumb {
   border-radius: 9em;
   background-color: var(--light-grey);
-}
-
-.media-list__item {
-  scroll-snap-align: start;
 }

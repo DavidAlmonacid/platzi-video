@@ -24,8 +24,8 @@
 
 .media-list__collection::-webkit-scrollbar {
   border-radius: 9em;
-  height: 6px;
-  background-color: var(--grey);
+  height: 4px;
+  background-color: var(--grey-80);
 }
 
 .media-list__collection::-webkit-scrollbar-thumb {

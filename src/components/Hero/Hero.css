@@ -32,9 +32,7 @@
 }
 
 .hero__link {
-  border: 1px solid;
   padding: 10px 44px;
-  background-color: var(--violet);
   box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 }
 

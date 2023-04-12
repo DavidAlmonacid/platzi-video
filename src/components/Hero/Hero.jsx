@@ -14,7 +14,11 @@ const Hero = () => {
       </div>
 
       <div className='hero__link-wrapper'>
-        <Link to='/login' role='button' className='hero__link'>
+        <Link
+          to='/login'
+          role='button'
+          className='hero__link hero__link--primary'
+        >
           Inicia sesión
         </Link>
       </div>

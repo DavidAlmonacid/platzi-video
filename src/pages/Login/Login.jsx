@@ -47,7 +47,7 @@ const Login = () => {
             className='form__input'
           />
 
-          <button type='button' className='form__button'>
+          <button type='button' className='form__button form__button--primary'>
             Iniciar sesión
           </button>
 

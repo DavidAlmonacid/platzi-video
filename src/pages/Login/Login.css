@@ -78,12 +78,9 @@
 }
 
 .form__button {
-  border: 0;
   padding: 8px 0;
   width: 100%;
-  background: rgb(255 255 255 / 20%);
   color: var(--white);
-  font-weight: 600;
 }
 
 .form__remember {

@@ -50,6 +50,13 @@ a:hover {
   text-decoration-line: underline;
 }
 
+input,
+button {
+  border: 0;
+  padding: 0;
+  font: 15px 'Mulish', sans-serif;
+}
+
 button,
 [role='button'] {
   display: flex;
@@ -61,14 +68,13 @@ button,
   font-weight: 700;
 }
 
+button[class$='--primary'],
+a[class$='--primary'] {
+  border: 1px solid;
+  background-color: var(--violet);
+}
+
 button:active,
 [role='button']:active {
   opacity: 0.8;
-}
-
-input,
-button {
-  border: 0;
-  padding: 0;
-  font: 15px 'Mulish', sans-serif;
 }

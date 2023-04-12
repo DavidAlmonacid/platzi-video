@@ -3,6 +3,7 @@ import { BASE_URL, API_KEY } from '@/config';
 import { MediaList } from '@components';
 
 const Home = () => {
+  // const [myList, setMyList] = useState([]);
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [collection, setCollection] = useState([]);
@@ -21,7 +22,6 @@ const Home = () => {
       );
     }
 
-    console.log(data.results ?? data.parts); // Remove this line
     setState(data.results ?? data.parts);
   };
 
@@ -33,6 +33,7 @@ const Home = () => {
 
   return (
     <>
+      {/* {myList.length > 0 && <MediaList name='Mi lista' media={[myList]} />} */}
       <MediaList name='Películas en tendencia' media={movies} />
       <MediaList name='Series en tendencia' media={series} />
       <MediaList name='Saga de James Bond' media={collection} />

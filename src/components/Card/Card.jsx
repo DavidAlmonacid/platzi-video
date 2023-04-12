@@ -1,4 +1,7 @@
 import { BASE_IMAGE_URL } from '@/config';
+import playIcon from '@assets/icons/play.svg';
+import plusIcon from '@assets/icons/plus.svg';
+import starIcon from '@assets/icons/star.svg';
 import './Card.css';
 
 const Card = ({ card }) => {
@@ -14,8 +17,34 @@ const Card = ({ card }) => {
       </picture>
 
       <div className='card__info'>
-        <p className='card__title'>{card.title || card.name}</p>
-        <p className='card__date'>{card.release_date || card.first_air_date}</p>
+        <h3 className='card__title'>{card.title || card.name}</h3>
+
+        <section className='card__buttons'>
+          <button type='button' className='card__button' title='Reproducir'>
+            <img src={playIcon} alt='play icon' className='card__button-icon' />
+          </button>
+
+          {/* TODO:
+            - Add functionality to the "add to my list" button
+          */}
+          <button
+            type='button'
+            className='card__button'
+            title='Agregar a mi lista'
+          >
+            <img src={plusIcon} alt='plus icon' className='card__button-icon' />
+          </button>
+        </section>
+
+        <div className='card__data'>
+          <p className='card__date'>
+            {(card.release_date || card.first_air_date).slice(0, 4)}
+          </p>
+          <p className='card__rating'>
+            <img src={starIcon} alt='star icon' className='card__rating-icon' />
+            <span>{card.vote_average.toFixed(1)}</span>
+          </p>
+        </div>
       </div>
     </article>
   );

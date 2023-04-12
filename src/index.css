@@ -67,7 +67,8 @@ button:active,
 }
 
 input,
-button,
-[role='button'] {
+button {
+  border: 0;
+  padding: 0;
   font: 15px 'Mulish', sans-serif;
 }

@@ -1,13 +1,13 @@
 # PlatziVideo
 
-Project from Platzi's [Frontend Developer 2019](https://platzi.com/clases/frontend-developer-2019/) course. Images from [Lorem Picsum](https://picsum.photos/).
+This project was made as a final project for the [Frontend Developer](https://platzi.com/cursos/frontend-developer-practico/) course on Platzi. It uses the [The Movie Database API](https://www.themoviedb.org/documentation/api) to fetch movies and shows.
 
-![Frame3.png](https://i.imgur.com/nciYDZc.png)
+![](https://i.imgur.com/LrkuPmI.png)
 
 ## Built with
 
 - Mobile-first Workflow
-- JavaScript
+- React JavaScript Framework
 - BEM Methodology
 - CSS Grid
 - CSS Flexbox
@@ -16,4 +16,4 @@ Project from Platzi's [Frontend Developer 2019](https://platzi.com/clases/fronte
 ## Author
 
 - GitHub - [David Almonacid](https://github.com/DavidAlmonacid)
-- LinkedIn - [David Almonacid](https://linkedin.com/in/davidalmonacid/)
+- LinkedIn - [David Almonacid](https://linkedin.com/in/davidalmonacid)

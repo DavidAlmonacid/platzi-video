@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  border-radius: 4px;
+  border-radius: 6px;
   min-width: fit-content;
   scroll-snap-align: start;
   overflow: hidden;

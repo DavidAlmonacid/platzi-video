@@ -1,12 +1,18 @@
+/* eslint-disable multiline-ternary */
+import { useContext } from 'react';
+import { MyListContext } from '@context';
 import { BASE_IMAGE_URL } from '@/config';
+import minusIcon from '@assets/icons/minus.svg';
 import playIcon from '@assets/icons/play.svg';
 import plusIcon from '@assets/icons/plus.svg';
 import starIcon from '@assets/icons/star.svg';
 import './Card.css';
 
 const Card = ({ card }) => {
+  const { addMedia, removeMedia } = useContext(MyListContext);
+
   return (
-    <article key={card.id} className='card'>
+    <article className='card'>
       <picture className='card__image-wrapper'>
         <img
           src={BASE_IMAGE_URL + card.poster_path}
@@ -24,16 +30,33 @@ const Card = ({ card }) => {
             <img src={playIcon} alt='play icon' className='card__button-icon' />
           </button>
 
-          {/* TODO:
-            - Add functionality to the "add to my list" button
-          */}
-          <button
-            type='button'
-            className='card__button'
-            title='Agregar a mi lista'
-          >
-            <img src={plusIcon} alt='plus icon' className='card__button-icon' />
-          </button>
+          {!card.is_added ? (
+            <button
+              type='button'
+              className='card__button'
+              title='Agregar a mi lista'
+              onClick={() => addMedia(card)}
+            >
+              <img
+                src={plusIcon}
+                alt='plus icon'
+                className='card__button-icon'
+              />
+            </button>
+          ) : (
+            <button
+              type='button'
+              className='card__button'
+              title='Eliminar de mi lista'
+              onClick={() => removeMedia(card)}
+            >
+              <img
+                src={minusIcon}
+                alt='minus icon'
+                className='card__button-icon'
+              />
+            </button>
+          )}
         </section>
 
         <div className='card__data'>

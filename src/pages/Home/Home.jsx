@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
-import { BASE_URL, API_KEY } from '@/config';
+import { useContext, useEffect, useState } from 'react';
+import { MyListContext } from '@context';
 import { MediaList } from '@components';
+import { API_KEY, BASE_URL } from '@/config';
 
 const Home = () => {
-  // const [myList, setMyList] = useState([]);
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [collection, setCollection] = useState([]);
+
+  const { myList } = useContext(MyListContext);
 
   const API_MOVIES = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}`;
   const API_SERIES = `${BASE_URL}/trending/tv/day?api_key=${API_KEY}`;
@@ -22,7 +24,12 @@ const Home = () => {
       );
     }
 
-    setState(data.results ?? data.parts);
+    const newData = structuredClone(data.results ?? data.parts);
+    newData.forEach((item) => {
+      item.is_added = false;
+    });
+
+    setState(newData);
   };
 
   useEffect(() => {
@@ -33,7 +40,7 @@ const Home = () => {
 
   return (
     <>
-      {/* {myList.length > 0 && <MediaList name='Mi lista' media={[myList]} />} */}
+      {myList.length > 0 && <MediaList name='Mi lista' media={myList} />}
       <MediaList name='Películas en tendencia' media={movies} />
       <MediaList name='Series en tendencia' media={series} />
       <MediaList name='Saga de James Bond' media={collection} />

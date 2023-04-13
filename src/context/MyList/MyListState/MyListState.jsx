@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import { MyListContext } from '../MyListContext';
 
 const MyListState = ({ children }) => {
@@ -7,6 +6,11 @@ const MyListState = ({ children }) => {
 
   const addMedia = (media) => {
     media.is_added = !media.is_added;
+
+    if (myList.find((item) => item.id === media.id)) {
+      return;
+    }
+
     setMyList([...myList, media]);
   };
 

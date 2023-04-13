@@ -30,20 +30,7 @@ const Card = ({ card }) => {
             <img src={playIcon} alt='play icon' className='card__button-icon' />
           </button>
 
-          {!card.is_added ? (
-            <button
-              type='button'
-              className='card__button'
-              title='Agregar a mi lista'
-              onClick={() => addMedia(card)}
-            >
-              <img
-                src={plusIcon}
-                alt='plus icon'
-                className='card__button-icon'
-              />
-            </button>
-          ) : (
+          {card.is_added ? (
             <button
               type='button'
               className='card__button'
@@ -53,6 +40,19 @@ const Card = ({ card }) => {
               <img
                 src={minusIcon}
                 alt='minus icon'
+                className='card__button-icon'
+              />
+            </button>
+          ) : (
+            <button
+              type='button'
+              className='card__button'
+              title='Agregar a mi lista'
+              onClick={() => addMedia(card)}
+            >
+              <img
+                src={plusIcon}
+                alt='plus icon'
                 className='card__button-icon'
               />
             </button>

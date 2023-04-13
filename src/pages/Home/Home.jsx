@@ -4,11 +4,11 @@ import { MediaList } from '@components';
 import { API_KEY, BASE_URL } from '@/config';
 
 const Home = () => {
+  const { myList } = useContext(MyListContext);
+
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [collection, setCollection] = useState([]);
-
-  const { myList } = useContext(MyListContext);
 
   const API_MOVIES = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}`;
   const API_SERIES = `${BASE_URL}/trending/tv/day?api_key=${API_KEY}`;
@@ -25,9 +25,16 @@ const Home = () => {
     }
 
     const newData = structuredClone(data.results ?? data.parts);
-    newData.forEach((item) => {
-      item.is_added = false;
-    });
+
+    if (myList.length > 0) {
+      newData.forEach((item) => {
+        myList.forEach((item2) => {
+          if (item.id === item2.id) {
+            item.is_added = true;
+          }
+        });
+      });
+    }
 
     setState(newData);
   };
@@ -36,7 +43,7 @@ const Home = () => {
     getData(API_MOVIES, setMovies);
     getData(API_SERIES, setSeries);
     getData(API_COLLECTION, setCollection);
-  }, []);
+  }, [myList]);
 
   return (
     <>
